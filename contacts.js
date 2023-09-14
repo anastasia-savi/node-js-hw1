@@ -14,7 +14,7 @@ async function listContacts() {
 async function getContactById(contactId) {
   // // ...твій код. Повертає об'єкт контакту з таким id. Повертає null, якщо контакт з таким id не знайдений.
   const contacts = await listContacts();
-  const contact = contacts.findIndex((item) => item.id === contactId);
+  const contact = contacts.find((item) => item.id === contactId);
   return contact || null;
 }
 
